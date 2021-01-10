@@ -94,6 +94,8 @@ def checkCriteria(criteria, failed = False):
         else:
             return checkCriteria(criteria, True)
 
+#def findCharacter(blockList, blockNumList):
+
 def makePass(length = None):
     """
         This function actually makes the password.
@@ -122,10 +124,19 @@ def makePass(length = None):
     if sc == True:
         blocks += '!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'
 
+    # this makes the decimal tracker for the random number finder
+    bnum = []
+    for val in range(len(blocks)):
+        perc = float((val + 1)/(len(blocks)))
+        bnum.append(perc)
+
+        print(val + 1, bnum[val])
+
+    """
     # tracks the length of the password
     track = 0
     while track < length:
-        print()
+    """
     
 makePass()
 
