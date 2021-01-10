@@ -3,7 +3,7 @@
 d = dict({'file' : 'passGen.py',
           'creator' : 'Matthew McLaren',
           'published' : '01/09/2021',
-          'status' : 'private',
+          'status' : 'public',
           'language' : 'python',
         })
 
@@ -11,6 +11,11 @@ for key in d.keys():
     print(key, ':', d[key])
 
 print('')
+
+"""___package___"""
+
+# random.py
+import random
 
 """___body___"""
 
@@ -117,8 +122,11 @@ def makePass(length = None):
     if sc == True:
         blocks += '!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'
 
-    # this prints blocks
-    print(blocks)
+    # tracks the length of the password
+    track = 0
+    while track < length:
+        print()
+    
 makePass()
 
 
